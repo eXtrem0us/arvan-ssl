@@ -10,6 +10,11 @@ Check  Certificate’s Expiration Date:
 echo | openssl s_client -connect example.com:443 -servername example.com 2>/dev/null | openssl x509 -noout -dates
 ```
 
+Check  Certificate’s Expiration Date of Certification File:
+```bash
+openssl x509 -noout -dates -in cert.pem
+```
+
 Cron:
 ```bash
 10 0 * * * certbot renew
